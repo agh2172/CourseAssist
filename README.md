@@ -1,2 +1,2 @@
 CourseAssist
-Team: Axel Henrikson (agh2172),
+Team: Axel Henrikson (agh2172), Lucas Cremers (lfc2136),
