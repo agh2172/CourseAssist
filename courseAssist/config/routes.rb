@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   
   get "/articles", to: "articles#index"
   get "/user", to: "user#index"
-  get "/addcourses", to: "articles#addcourses"
+  get "/addcourses", to: "addcourses#index"
 
 end
