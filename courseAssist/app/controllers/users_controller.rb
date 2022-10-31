@@ -9,4 +9,10 @@ class UsersController < ApplicationController
     #creates new user
     #redirect_to addcourses
   end
+
+  def create
+    @users = User.create!(movie_params)
+    flash[:notice] = "#{@movie.title} was successfully created."
+    redirect_to movies_path
+  end
 end
