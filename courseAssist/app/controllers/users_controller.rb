@@ -11,8 +11,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @users = User.create!(movie_params)
-    flash[:notice] = "#{@movie.title} was successfully created."
-    redirect_to movies_path
+    #@users = User.create!(user_params)
+    #@user = User.find params[:id]
+    #flash[:notice] = "#{@user} was successfully created."
+    redirect_to users_path
   end
 end
