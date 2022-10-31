@@ -1,22 +1,17 @@
-<h1>Hi ss6167, Provide some more info about yourself</h1>
-<%= form_tag users_path, :class => 'form' do %>
-  <%= label :user, :first, 'First Name', :class => 'col-form-label' %>
-  <%= text_field :user, :first, :class => 'form-control' %>
-
-  <%= label :user, :last, 'Last Name', :class => 'col-form-label' %>
-  <%= text_field :user, :last, :class => 'form-control' %>
-
-  <%= label :user, :year, 'Year: ', :class => 'col-form-label'  %>
-  <%= select :user, :year, ['First Year','Second Year','Third Year','Fourth Year'], {}, {:class => 'form-control col-1'} %>
-
-  <%= label :user, :school, 'School:', :class => 'col-form-label'  %>
-  <%= select :user, :school, ['CC','SEAS'], {}, {:class => 'form-control col-1'} %>
-
-  <%= label :user, :major, 'Major', :class => 'col-form-label' %>
-  <%= text_field :user, :major, :class => 'form-control' %>
-
-  <%= label :user, :minor, 'Minor:', :class => 'col-form-label' %>
-  <%= text_field :user, :minor, :class => 'form-control' %>
-
-  <%= submit_tag 'Next', :class => 'btn btn-primary' %>
+<h1>Hi, please provide some more info about yourself</h1>
+<%= form_tag users_path, class: 'form' do %>
+  <%= label :user, :first, 'First Name', class: 'col-form-label' %>
+  <%= text_field :user, :first, class:  'form-control' %>
+  <%= label :user, :last, 'Last Name', class: 'col-form-label' %>
+  <%= text_field :user, :last, class: 'form-control' %>
+  <%= label :user, :year, 'Year', class: 'col-form-label'  %>
+  <%= select :user, :year, ['First Year','Second Year','Third Year','Fourth Year'], {}, {class: 'form-control col-1'} %>
+  <%= label :user, :school, 'School', class: 'col-form-label'  %>
+  <%= select :user, :school, ['CC','SEAS'], {}, {class: 'form-control col-1'} %>
+  <%= label :user, :major, 'Major', class: 'col-form-label' %>
+  <%= text_field :user, :major, class: 'form-control' %>
+  <%= label :user, :minor, 'Minor', class: 'col-form-label' %>
+  <%= text_field :user, :minor, class: 'form-control' %>
+  <br />
+  <%= submit_tag 'Next', class: 'btn btn-primary' %>
 <% end %>
