@@ -1,5 +1,7 @@
 class AddcoursesController < ApplicationController
-  def index
+  def show
+    id = params[:id] # retrieve movie ID from URI route
+    @user = User.find(id) # look up movie by unique ID
   end
 
   def show
