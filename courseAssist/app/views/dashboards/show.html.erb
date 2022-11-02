@@ -1,6 +1,9 @@
-<h1>Welcome to your dashboard</h1>
-
-<h2>Details about <em><%= @uni %></em></h2>
-
-
-<h3>Core Requirements</h3>
+<h1>Hi, <%= @user.first %> <%= @user.last %>! Welcome to CourseAssist!</h1>
+<p>Uni: <%= @user.uni %></p>
+<p>Year: <%= @user.year %></p>
+<p>School: <%= @user.school %></p>
+<p>Major: <%= @user.major %></p>
+<h3>Core Requirements:</h3>
+<p><%= @reqs %></p>
+<h3>Major Requirements:</h3>
+<p><%= @maj_reqs %></p>
