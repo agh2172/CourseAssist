@@ -9,6 +9,13 @@ class DashboardsController < ApplicationController
     puts @uni
     puts "uni above ^^^"
     @uni = session[:uni]
+    @user = User.find_by(uni: @uni)
+    if @user
+      puts "Valid user"
+    else
+      flash[:notice] = "User not found. Please sign up first."
+      redirect_to root_path
+    end
   end
 
   def create
