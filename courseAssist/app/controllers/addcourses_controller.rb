@@ -1,25 +1,28 @@
 class AddcoursesController < ApplicationController
-  def show
-    id = params[:id] # retrieve movie ID from URI route
-    @user = User.find(id) # look up movie by unique ID
-  end
 
   def index
     @uni = session[:uni]
   end
 
+  def show
+    redirect_to action: "new"
+  end
+
   def new
-    #creates new user
+    #creates new user/course pairing
     #redirect_to addcourses
-    # if session is not empty
   end
 
   def create
-    #@users = User.create!(user_params)
-    #@user = User.find params[:id]
-    #flash[:notice] = "#{@user} was successfully created."
-    User.create!(user_params)
+    @addcourse  = Addcourse.create!(uni: session[:uni], 
+                                    course: addcourse_params[:course], 
+                                    semester: addcourse_params[:semester], 
+                                    year: addcourse_params[:year])
     redirect_to addcourses_path
+  end
+
+  def addcourse_params
+    params.require(:addcourse).permit(:course, :semester, :year)
   end
 
 end

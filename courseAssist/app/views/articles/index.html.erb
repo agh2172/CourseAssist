@@ -5,9 +5,12 @@
 <p>or</p> <br>
 <p>Enter your uni: </p>
 
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
 <%= form_tag dashboards_path, :class => 'form' do %>
-
-<%= text_field :uni, 'uni', :class => 'form-control' %>
-<%= link_to 'Sign In', dashboards_path, :class => 'btn btn-primary col-2' %>
-
+  <%= label :user, :uni, 'UNI', :class => 'col-form-label' %>
+  <%= text_field :user, 'uni', :class => 'form-control' %>
+  <%= submit_tag 'Enter', :class => 'btn btn-primary' %>
 <% end %>

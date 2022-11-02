@@ -1,0 +1,2 @@
+class Addcourse < ApplicationRecord
+end
