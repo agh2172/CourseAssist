@@ -11,18 +11,22 @@ Background: users in database
     | Jackson    | Roberts     | 2023         | CC     | Computer Science | Economics | jr3876 |
     | Sameer     | Saxena      | 2024         | SEAS   | Computer Science | Economics | ss6167 |
 
+    And I am on the home page
+
 Scenario: add a new user to the database
 
     When I follow "Sign Up"
-    And I fill in "first" with "Axel"
-    And I fill in "second" with "Henrikson"
-    And I fill in "year" with "2023"
-    And I fill in "school" with "CC"
-    And I fill in "major" with "Computer Science"
-    And I fill in "minor" with "Ecnomonics"
-    And I fill in "uni" with "agh2172"
-    And I follow "Next"
+    And I fill in "First Name" with "Axel"
+    And I fill in "Last Name" with "Henrikson"
+    And I fill in "UNI" with "agh2172"
+    And I select "2026" from "Year"
+    And I select "CC" from "School"
+    And I select "Computer Science" from "Major" 
+    And I select "Economics" from "Minor" 
+    And I press "Next"
     Then the major of "agh2172" should be "Computer Science"
+    Then the minor of "agh2172" should be "Economics"
+    Then the school of "agh2172" should be "CC"
 
 
 
