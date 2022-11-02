@@ -4,7 +4,8 @@ class AddcoursesController < ApplicationController
     @user = User.find(id) # look up movie by unique ID
   end
 
-  def show
+  def index
+    @uni = session[:uni]
   end
 
   def new

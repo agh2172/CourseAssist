@@ -15,12 +15,13 @@ class UsersController < ApplicationController
     #@user = User.find params[:id]
     #flash[:notice] = "#{@user} was successfully created."
     @user  = User.create!(user_params)
-    redirect_to addcourses_path(@user)
+    session[:uni] = @user.uni
+    redirect_to addcourses_path
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:first, :last, :school, :year, :major, :minor)
+    params.require(:user).permit(:first, :last, :uni, :school, :year, :major, :minor)
   end
 end
