@@ -1,18 +1,18 @@
 class DashboardsController < ApplicationController
   def index
-    puts @uni
-    puts "uni above ^^^"
+    #puts @uni
+    #puts "uni above ^^^"
     @uni = session[:uni]
   end
 
   def show
-    puts @uni
-    puts "uni above ^^^"
+    #puts @uni
+    #puts "uni above ^^^"
     @uni = session[:uni]
     @user = User.find_by(uni: @uni)
     if @user
-      puts @user
-      puts "Valid user"
+      #puts @user
+      #puts "Valid user"
       if (@user.school == "SEAS")
         @reqs = "One year physics, CHEM CC1403, ENGI E1102, ENGI E1006, Phys/Chem Lab, ENGL CC1010,
          2 Core Humanities, HUMA UN1121 or HUMA UN1123, Econ UN1105, 9 Non-tech points"
@@ -38,7 +38,7 @@ class DashboardsController < ApplicationController
 
   def create
     @user = user_params["uni"]
-    puts @user
+    #puts @user
     session[:uni] = @user
     redirect_to dashboards_path
   end
