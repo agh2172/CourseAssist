@@ -11,6 +11,5 @@ Rails.application.routes.draw do
   resource :addcourses
   resource :dashboards
   get "/addcourses", to: "addcourses#index"
-  get "/dashboards", to: "dashboards#index"
-
+  
 end
