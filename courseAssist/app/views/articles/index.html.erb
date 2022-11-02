@@ -2,5 +2,12 @@
 <p>Superior class selection</p>
 
 <%= link_to 'Sign Up', users_path %>
+<p>or</p> <br>
+<p>Enter your uni: </p>
 
-<button>Sign In</button>
+<%= form_tag dashboards_path, :class => 'form' do %>
+
+<%= text_field :uni, 'uni', :class => 'form-control' %>
+<%= link_to 'Sign In', dashboards_path, :class => 'btn btn-primary col-2' %>
+
+<% end %>
