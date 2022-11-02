@@ -1,2 +1,2 @@
 CourseAssist
-Team: Axel Henrikson (agh2172), Lucas Cremers (lfc2136), Jackson Roberts (jr3876)
+Team: Axel Henrikson (agh2172), Lucas Cremers (lfc2136), Jackson Roberts (jr3876), Sameer Saxena (ss6167)
