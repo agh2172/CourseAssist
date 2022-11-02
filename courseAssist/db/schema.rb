@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_31_235156) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "courses_takens", force: :cascade do |t|
+  create_table "courses_taken", force: :cascade do |t|
     t.string "uni"
     t.string "courseID"
     t.string "semester"
