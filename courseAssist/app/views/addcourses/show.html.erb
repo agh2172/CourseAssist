@@ -1,10 +1,6 @@
 <h1>Details about <em><%= @uni %></em></h1>
 
-<%= link_to 'Back to more information about yourself', users_path %>
-<br>
-<%= link_to 'Back to Homepage', root_path %>
-<br>
-<br>
+<%= link_to 'Back to Homepage', users_path %>
 <%= label :course, 'Course:', :class => 'col-form-label' %>
 <%= text_field :course, 'course', :class => 'form-control' %>
 
@@ -12,7 +8,3 @@
 <%= select :semester, :semester, ['F18','S19','F19','S20','F20','S21','F21','S22','F22'], {}, {:class => 'form-control col-1'} %>
 
 <%= submit_tag 'Next', :class => 'btn btn-primary' %>
-
-
-<%# commented out %>
-<%# <p>Find me in app/views/addcourses/index.html.erb</p>  %>
