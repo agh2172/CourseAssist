@@ -1,0 +1,19 @@
+<h1>Hi ss6167, Provide some more info about yourself</h1>
+<%= form_tag users_path, :class => 'form' do %>
+  <%= label :name, 'Name:', :class => 'col-form-label' %>
+  <%= text_field :name, 'name', :class => 'form-control' %>
+
+  <%= label :year, :year, 'Year: ', :class => 'col-form-label'  %>
+  <%= select :year, :year, ['First Year','Second Year','Third Year','Fourth Year'], {}, {:class => 'form-control col-1'} %>
+
+  <%= label :school, :school, 'School:', :class => 'col-form-label'  %>
+  <%= select :school, :school, ['CC','SEAS'], {}, {:class => 'form-control col-1'} %>
+
+  <%= label :major, 'Major:', :class => 'col-form-label' %>
+  <%= text_field :major, 'major', :class => 'form-control' %>
+
+  <%= label :minor, 'Minor:', :class => 'col-form-label' %>
+  <%= text_field :minor, 'minor', :class => 'form-control' %>
+
+  <%= submit_tag 'Next', :class => 'btn btn-primary' %>
+<% end %>
