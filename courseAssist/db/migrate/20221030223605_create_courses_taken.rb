@@ -1,6 +1,6 @@
 class CreateCoursesTaken < ActiveRecord::Migration[7.0]
   def change
-    create_table :courses_takens do |t|
+    create_table :courses_taken do |t|
       t.string :uni
       t.string :courseID
       t.string :semester
