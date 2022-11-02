@@ -11,9 +11,9 @@
   <%= label :user, :school, 'School', class: 'col-form-label'  %>
   <%= select :user, :school, ['CC','SEAS'], {}, {class: 'form-control col-1'} %>
   <%= label :user, :major, 'Major', :class => 'col-form-label'  %>
-  <%= select :user, :major, ['Computer Science'], {}, {:class => 'form-control col-1'} %>
+  <%= select :user, :major, ['Computer Science', 'Economics'], {}, {:class => 'form-control col-1'} %>
   <%= label :user, :minor, 'Minor', :class => 'col-form-label'  %>
-  <%= select :user, :minor, ['Economics'], {}, {:class => 'form-control col-1'} %>
+  <%= select :user, :minor, ['Computer Science', 'Economics', 'None'], {}, {:class => 'form-control col-1'} %>
   <br />
   <%= submit_tag 'Next', class: 'btn btn-primary' %>
 <% end %>
