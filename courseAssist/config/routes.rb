@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get "/articles", to: "articles#index"
   #get "/user", to: "user#index"
   resource :users
+  resource :dashboards
   get "/addcourses/:id", to: "addcourses#show"
   get "/addcourses", to: "addcourses#index"
+  get "/dashboards", to: "dashboards#index"
 
 end
