@@ -2,19 +2,19 @@
 
 <%= link_to 'Back to more information about yourself', users_path %>
 <br>
-<%= link_to 'Back to Homepage', articles_path %>
-<br>
 <br>
 
 <%= form_tag addcourses_path, class: 'form' do %>
-    <%= label :addcourse, :course, 'Course:', :class => 'col-form-label' %>
+    <%= label :addcourse, :course, 'Course', :class => 'col-form-label' %>
     <%= text_field :addcourse, :course, :class => 'form-control' %>
 
-    <%= label :addcourse, :semester, 'Semester:', class: 'col-form-label'  %>
+    <%= label :addcourse, :semester, 'Semester', class: 'col-form-label'  %>
     <%= select :addcourse, :semester, ['Fall', 'Spring'], {}, {class: 'form-control col-1'} %>
 
-    <%= label :addcourse, :year, 'Year:', class: 'col-form-label'  %>
+    <%= label :addcourse, :year, 'Year', class: 'col-form-label'  %>
     <%= select :addcourse, :year, [2018, 2019, 2020, 2021, 2022], {}, {class: 'form-control col-1'} %>
 
     <%= submit_tag 'Add', :class => 'btn btn-primary' %>
 <% end %>
+<br>
+<%= link_to 'Finish Registration', dashboards_path %>
