@@ -24,3 +24,5 @@ And to run the RSpec tests, run:
 rake spec
 
 Link to github: https://github.com/agh2172/CourseAssist
+Link to Heroku deployment: https://stormy-badlands-60705.herokuapp.com/
+
