@@ -7,3 +7,7 @@
 <p><%= @reqs %></p>
 <h3>Major Requirements:</h3>
 <p><%= @maj_reqs %></p>
+<% if not @min_reqs =="NA" %>
+  <h3>Minor Requirements:</h3>
+  <p><%= @min_reqs %></p>
+<% end %>

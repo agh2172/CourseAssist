@@ -9,7 +9,11 @@ module NavigationHelpers
       case page_name
   
       when /^the home page$/ then '/articles'
+<<<<<<< HEAD
       when /^the dashboard page$/ then '/dashboard'
+=======
+      when /^the courses page$/ then '/addcourses'
+>>>>>>> 407cc7925dd77173edd9e63a225a85437e084f88
   
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:
