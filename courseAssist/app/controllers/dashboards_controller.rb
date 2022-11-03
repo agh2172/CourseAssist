@@ -43,7 +43,7 @@ class DashboardsController < ApplicationController
          if (@user.major == "Computer Science")
            @maj_reqs = "COMS W1004, COMS W3134, COMS W3157, COMS W3203, COMS W3251, COMS W3261, CSEE W3827, COMS W4115, COMS W4118, CSEE W4119, 2xAny COMS W41xx, 2xAny COMS W48xx"
          elsif (@user.major == "Economics")
-           @maj_reqs = "MATH UN1101, MATH UN1102, MATH UN1201, MATH UN1205, STAT UN1201, UN1105, UN3211, UN3213, UN3412, 5x 3000/4000 Electives"
+           @maj_reqs = "MATH UN1101, MATH UN1102, MATH UN1201, MATH UN1205, STAT UN1201, ECON UN1105, ECON UN3211, ECON UN3213, ECON UN3412, 5x 3000/4000 Electives"
          else
            @maj_reqs = "None left!"
          end
