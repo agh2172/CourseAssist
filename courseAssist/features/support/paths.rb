@@ -9,6 +9,7 @@ module NavigationHelpers
       case page_name
   
       when /^the home page$/ then '/articles'
+      when /^the dashboard page$/ then '/dashboard'
   
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:
