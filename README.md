@@ -4,8 +4,9 @@ Team Members -- Jackson Roberts (jr3876), Sameer Saxena (ss6167), Axel Henrikson
 Starting, Using, and Testing CourseAssist:
 
 Specifications:
-Ruby version: 2.7.6
-OS: Mac OS 12.6
+
+Ruby version: 2.7.6,
+OS: Mac OS 12.6,
 Branch to grade: proj-iter-1
 
 (1) bundle install (this will install all the necessary gems)
