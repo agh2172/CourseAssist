@@ -1514,3 +1514,635 @@ Processing by UsersController#create as HTML
 Redirected to http://test.host/addcourses
 Completed 302 Found in 4ms (ActiveRecord: 0.7ms | Allocations: 580)
   [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:07.808203"], ["updated_at", "2022-11-03 03:02:07.808203"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:07.813337"], ["updated_at", "2022-11-03 03:02:07.813337"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 21020)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.0ms | Allocations: 22129)
+Started GET "/users" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by UsersController#show as HTML
+Redirected to http://www.example.com/users/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 565)
+Started GET "/users/new" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1763)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2221)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2913)
+Started POST "/users" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first"=>"Axel", "last"=>"Henrikson", "uni"=>"agh2172", "year"=>"2026", "school"=>"CC", "major"=>"Computer Science", "minor"=>"Economics"}, "commit"=>"Next"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Henrikson"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "agh2172"], ["created_at", "2022-11-03 03:02:07.917925"], ["updated_at", "2022-11-03 03:02:07.917925"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/addcourses
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 655)
+Started GET "/addcourses" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by AddcoursesController#show as HTML
+Redirected to http://www.example.com/addcourses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 149)
+Started GET "/addcourses/new" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by AddcoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering addcourses/new.html.erb within layouts/application
+  Rendered addcourses/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1554)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2246)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "agh2172"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "agh2172"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "agh2172"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:07.946094"], ["updated_at", "2022-11-03 03:02:07.946094"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:07.950897"], ["updated_at", "2022-11-03 03:02:07.950897"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 372)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 830)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1032)
+Started GET "/users" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by UsersController#show as HTML
+Redirected to http://www.example.com/users/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+Started GET "/users/new" for 127.0.0.1 at 2022-11-02 23:02:07 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1312)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1770)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1972)
+Started POST "/users" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first"=>"Axel", "last"=>"Henrikson", "uni"=>"agh2172", "year"=>"2026", "school"=>"CC", "major"=>"Computer Science", "minor"=>"Economics"}, "commit"=>"Next"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Henrikson"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "agh2172"], ["created_at", "2022-11-03 03:02:08.006128"], ["updated_at", "2022-11-03 03:02:08.006128"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/addcourses
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 645)
+Started GET "/addcourses" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#show as HTML
+Redirected to http://www.example.com/addcourses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+Started GET "/addcourses/new" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering addcourses/new.html.erb within layouts/application
+  Rendered addcourses/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 751)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1208)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1410)
+Started POST "/addcourses" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#create as HTML
+  Parameters: {"addcourse"=>{"course"=>"Engineering SaaS", "semester"=>"Fall", "year"=>"2022"}, "commit"=>"Add"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAddcourse Create (0.4ms)[0m  [1m[32mINSERT INTO "addcourses" ("uni", "course", "semester", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uni", "agh2172"], ["course", "Engineering SaaS"], ["semester", "Fall"], ["year", 2022], ["created_at", "2022-11-03 03:02:08.107220"], ["updated_at", "2022-11-03 03:02:08.107220"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/addcourses
+Completed 302 Found in 52ms (ActiveRecord: 1.5ms | Allocations: 14634)
+Started GET "/addcourses" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#show as HTML
+Redirected to http://www.example.com/addcourses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+Started GET "/addcourses/new" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering addcourses/new.html.erb within layouts/application
+  Rendered addcourses/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 751)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1208)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1409)
+Started POST "/addcourses" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#create as HTML
+  Parameters: {"addcourse"=>{"course"=>"Computer Networks", "semester"=>"Spring", "year"=>"2021"}, "commit"=>"Add"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAddcourse Create (0.2ms)[0m  [1m[32mINSERT INTO "addcourses" ("uni", "course", "semester", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["uni", "agh2172"], ["course", "Computer Networks"], ["semester", "Spring"], ["year", 2021], ["created_at", "2022-11-03 03:02:08.131407"], ["updated_at", "2022-11-03 03:02:08.131407"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/addcourses
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 732)
+Started GET "/addcourses" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#show as HTML
+Redirected to http://www.example.com/addcourses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 144)
+Started GET "/addcourses/new" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by AddcoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering addcourses/new.html.erb within layouts/application
+  Rendered addcourses/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 751)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1208)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 1409)
+  [1m[36mAddcourse Load (0.4ms)[0m  [1m[34mSELECT "addcourses".* FROM "addcourses" WHERE "addcourses"."uni" = ? AND "addcourses"."course" = ? AND "addcourses"."semester" = ? AND "addcourses"."year" = ? LIMIT ?[0m  [["uni", "agh2172"], ["course", "Engineering SaaS"], ["semester", "Fall"], ["year", 2022], ["LIMIT", 1]]
+  [1m[36mAddcourse Load (0.1ms)[0m  [1m[34mSELECT "addcourses".* FROM "addcourses" WHERE "addcourses"."uni" = ? AND "addcourses"."course" = ? AND "addcourses"."semester" = ? AND "addcourses"."year" = ? LIMIT ?[0m  [["uni", "agh2172"], ["course", "Computer Networks"], ["semester", "Spring"], ["year", 2021], ["LIMIT", 1]]
+  [1m[36mAddcourse Load (0.1ms)[0m  [1m[34mSELECT "addcourses".* FROM "addcourses" WHERE "addcourses"."uni" = ? AND "addcourses"."course" = ? AND "addcourses"."semester" = ? AND "addcourses"."year" = ? LIMIT ?[0m  [["uni", "agh2172"], ["course", "Advanced Programming"], ["semester", "Fall"], ["year", 2021], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:08.157700"], ["updated_at", "2022-11-03 03:02:08.157700"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:08.161501"], ["updated_at", "2022-11-03 03:02:08.161501"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 365)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 822)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 1023)
+Started POST "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#create as HTML
+  Parameters: {"user"=>{"uni"=>"ss6167"}, "commit"=>"Enter"}
+Redirected to http://www.example.com/dashboards
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 209)
+Started GET "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ss6167"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 285)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 745)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 1711)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:08.202915"], ["updated_at", "2022-11-03 03:02:08.202915"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:08.205844"], ["updated_at", "2022-11-03 03:02:08.205844"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 372)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 830)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1032)
+Started POST "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#create as HTML
+  Parameters: {"user"=>{"uni"=>"agh2172"}, "commit"=>"Enter"}
+Redirected to http://www.example.com/dashboards
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 205)
+Started GET "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "agh2172"], ["LIMIT", 1]]
+Redirected to http://www.example.com/
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 355)
+Started GET "/" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 464)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 921)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 1122)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:08.249396"], ["updated_at", "2022-11-03 03:02:08.249396"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:08.253147"], ["updated_at", "2022-11-03 03:02:08.253147"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 365)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 822)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1023)
+Started POST "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#create as HTML
+  Parameters: {"user"=>{"uni"=>"ss6167"}, "commit"=>"Enter"}
+Redirected to http://www.example.com/dashboards
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 205)
+Started GET "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ss6167"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 477)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 950)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:08.297558"], ["updated_at", "2022-11-03 03:02:08.297558"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:08.301852"], ["updated_at", "2022-11-03 03:02:08.301852"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/articles" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 365)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 822)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1023)
+Started POST "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#create as HTML
+  Parameters: {"user"=>{"uni"=>"jr3876"}, "commit"=>"Enter"}
+Redirected to http://www.example.com/dashboards
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 205)
+Started GET "/dashboards" for 127.0.0.1 at 2022-11-02 23:02:08 -0400
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "jr3876"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 476)
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 954)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by AddcoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering addcourses/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered addcourses/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 99)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 228)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1401)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.309587"], ["updated_at", "2022-11-03 03:02:16.309587"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.312744"], ["updated_at", "2022-11-03 03:02:16.312744"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.314319"], ["updated_at", "2022-11-03 03:02:16.314319"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.315610"], ["updated_at", "2022-11-03 03:02:16.315610"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.317584"], ["updated_at", "2022-11-03 03:02:16.317584"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ss6167"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 90)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 217)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 1265)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.328287"], ["updated_at", "2022-11-03 03:02:16.328287"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.330509"], ["updated_at", "2022-11-03 03:02:16.330509"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.332638"], ["updated_at", "2022-11-03 03:02:16.332638"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.336225"], ["updated_at", "2022-11-03 03:02:16.336225"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.338886"], ["updated_at", "2022-11-03 03:02:16.338886"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ss6167"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 591)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.352486"], ["updated_at", "2022-11-03 03:02:16.352486"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.355159"], ["updated_at", "2022-11-03 03:02:16.355159"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.357891"], ["updated_at", "2022-11-03 03:02:16.357891"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.361063"], ["updated_at", "2022-11-03 03:02:16.361063"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.363805"], ["updated_at", "2022-11-03 03:02:16.363805"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ss6167"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 591)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.373239"], ["updated_at", "2022-11-03 03:02:16.373239"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.375415"], ["updated_at", "2022-11-03 03:02:16.375415"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.377462"], ["updated_at", "2022-11-03 03:02:16.377462"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.379193"], ["updated_at", "2022-11-03 03:02:16.379193"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.380790"], ["updated_at", "2022-11-03 03:02:16.380790"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ss6167"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 218)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 591)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.391194"], ["updated_at", "2022-11-03 03:02:16.391194"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.394640"], ["updated_at", "2022-11-03 03:02:16.394640"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.397645"], ["updated_at", "2022-11-03 03:02:16.397645"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.399830"], ["updated_at", "2022-11-03 03:02:16.399830"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.401425"], ["updated_at", "2022-11-03 03:02:16.401425"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "jr3876"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 218)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.1ms | Allocations: 591)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.412655"], ["updated_at", "2022-11-03 03:02:16.412655"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.415159"], ["updated_at", "2022-11-03 03:02:16.415159"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.417701"], ["updated_at", "2022-11-03 03:02:16.417701"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.420180"], ["updated_at", "2022-11-03 03:02:16.420180"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.423156"], ["updated_at", "2022-11-03 03:02:16.423156"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "jr3876"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 218)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 591)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.434783"], ["updated_at", "2022-11-03 03:02:16.434783"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.437824"], ["updated_at", "2022-11-03 03:02:16.437824"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.440747"], ["updated_at", "2022-11-03 03:02:16.440747"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.444406"], ["updated_at", "2022-11-03 03:02:16.444406"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.447437"], ["updated_at", "2022-11-03 03:02:16.447437"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "jr3876"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 591)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.457001"], ["updated_at", "2022-11-03 03:02:16.457001"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.459200"], ["updated_at", "2022-11-03 03:02:16.459200"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.461559"], ["updated_at", "2022-11-03 03:02:16.461559"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.465075"], ["updated_at", "2022-11-03 03:02:16.465075"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.467807"], ["updated_at", "2022-11-03 03:02:16.467807"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ah2102"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 590)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.476827"], ["updated_at", "2022-11-03 03:02:16.476827"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.478955"], ["updated_at", "2022-11-03 03:02:16.478955"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.480769"], ["updated_at", "2022-11-03 03:02:16.480769"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.484392"], ["updated_at", "2022-11-03 03:02:16.484392"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.487528"], ["updated_at", "2022-11-03 03:02:16.487528"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "ah2102"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 590)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.496626"], ["updated_at", "2022-11-03 03:02:16.496626"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.499039"], ["updated_at", "2022-11-03 03:02:16.499039"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.501825"], ["updated_at", "2022-11-03 03:02:16.501825"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.505392"], ["updated_at", "2022-11-03 03:02:16.505392"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.508194"], ["updated_at", "2022-11-03 03:02:16.508194"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "lc1902"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 590)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.516980"], ["updated_at", "2022-11-03 03:02:16.516980"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.519089"], ["updated_at", "2022-11-03 03:02:16.519089"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.521873"], ["updated_at", "2022-11-03 03:02:16.521873"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.525161"], ["updated_at", "2022-11-03 03:02:16.525161"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.527796"], ["updated_at", "2022-11-03 03:02:16.527796"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "lc1902"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 590)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.537052"], ["updated_at", "2022-11-03 03:02:16.537052"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.539761"], ["updated_at", "2022-11-03 03:02:16.539761"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.542926"], ["updated_at", "2022-11-03 03:02:16.542926"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.546137"], ["updated_at", "2022-11-03 03:02:16.546137"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.548612"], ["updated_at", "2022-11-03 03:02:16.548612"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "jy1203"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 585)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.557395"], ["updated_at", "2022-11-03 03:02:16.557395"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.559570"], ["updated_at", "2022-11-03 03:02:16.559570"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.561980"], ["updated_at", "2022-11-03 03:02:16.561980"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.565561"], ["updated_at", "2022-11-03 03:02:16.565561"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.568309"], ["updated_at", "2022-11-03 03:02:16.568309"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "jy1203"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 91)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 218)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 585)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Sameer"], ["last", "Saxena"], ["year", 2024], ["school", "SEAS"], ["major", "Computer Science"], ["minor", "Economics"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.577532"], ["updated_at", "2022-11-03 03:02:16.577532"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Jackson"], ["last", "Roberts"], ["year", 2023], ["school", "CC"], ["major", "Economics"], ["minor", "Computer Science"], ["uni", "jr3876"], ["created_at", "2022-11-03 03:02:16.579959"], ["updated_at", "2022-11-03 03:02:16.579959"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Axel"], ["last", "Hendrickson"], ["year", 2023], ["school", "CC"], ["major", "Cycling"], ["minor", "None"], ["uni", "ah2102"], ["created_at", "2022-11-03 03:02:16.582478"], ["updated_at", "2022-11-03 03:02:16.582478"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Lucas"], ["last", "Cremers"], ["year", 2023], ["school", "SEAS"], ["major", "Glass Building"], ["minor", "Reading"], ["uni", "lc1902"], ["created_at", "2022-11-03 03:02:16.585618"], ["updated_at", "2022-11-03 03:02:16.585618"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", "Junfeng"], ["last", "Yang"], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", nil], ["uni", "jy1203"], ["created_at", "2022-11-03 03:02:16.588370"], ["updated_at", "2022-11-03 03:02:16.588370"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "fadsjkl"], ["LIMIT", 1]]
+Redirected to http://test.host/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 216)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"first"=>"", "last"=>"", "major"=>"Computer Science", "minor"=>"Computer Science", "school"=>"CC", "uni"=>"ss6167", "year"=>"2026"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("first", "last", "year", "school", "major", "minor", "uni", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first", ""], ["last", ""], ["year", 2026], ["school", "CC"], ["major", "Computer Science"], ["minor", "Computer Science"], ["uni", "ss6167"], ["created_at", "2022-11-03 03:02:16.606590"], ["updated_at", "2022-11-03 03:02:16.606590"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/addcourses
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms | Allocations: 580)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
