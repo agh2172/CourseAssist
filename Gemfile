@@ -65,7 +65,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'pg', '~> 0.20'
+  #gem 'pg', '~> 0.20'
 
 
 
@@ -85,6 +85,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.20' # for Heroku deployment
+  #gem 'pg', '~> 0.20' # for Heroku deployment
   gem 'rails_12factor'
 end
