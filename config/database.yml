@@ -7,11 +7,19 @@
 
 
 development:
-    adapter: postgresql
-    database: d29bf8g7kamcr9
-    host: ec2-34-194-40-194.compute-1.amazonaws.com
-    user: lqvpikhyfvivse
-    password: afe1b2b77912ffeb7e41fae1be6a93cee4a163ea095595318368e02db7b471c6
+  adapter: postgresql
+  database: d29bf8g7kamcr9
+  host: ec2-34-194-40-194.compute-1.amazonaws.com
+  user: lqvpikhyfvivse
+  password: afe1b2b77912ffeb7e41fae1be6a93cee4a163ea095595318368e02db7b471c6
+
+
+production:
+  adapter: postgresql
+  database: d29bf8g7kamcr9
+  host: ec2-34-194-40-194.compute-1.amazonaws.com
+  user: lqvpikhyfvivse
+  password: afe1b2b77912ffeb7e41fae1be6a93cee4a163ea095595318368e02db7b471c6
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
