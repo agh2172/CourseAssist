@@ -1,4 +1,5 @@
 <h1>Hi, <%= @user.first %> <%= @user.last %>! Welcome to CourseAssist!</h1>
+<%= link_to 'Back to course registration', addcourses_path %>
 <p>Uni: <%= @user.uni %></p>
 <p>Year: <%= @user.year %></p>
 <p>School: <%= @user.school %></p>
@@ -10,4 +11,6 @@
 <% if not @min_reqs =="NA" %>
   <h3>Minor Requirements:</h3>
   <p><%= @min_reqs %></p>
+ <h3>Registered Classes:</h3>
+ <p><%= raw @classes %></p>
 <% end %>

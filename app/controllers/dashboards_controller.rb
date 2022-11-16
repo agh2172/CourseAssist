@@ -10,6 +10,8 @@ class DashboardsController < ApplicationController
     #puts "uni above ^^^"
     @uni = session[:uni]
     @user = User.find_by(uni: @uni)
+    @classes=Addcourse.find_by(uni: @uni).course # how to get all the courses of someone?
+    #puts sanitize @classes.course
     #validate if user exists
     @min_reqs = "NA"
     if @user
