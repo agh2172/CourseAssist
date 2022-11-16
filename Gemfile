@@ -17,7 +17,7 @@ gem "puma", "~> 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
-gem "pg", '~> 0.20'
+gem "pg", '~> 1.1'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -81,7 +81,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'pg', '~> 0.20'
 end
 
 group :production do
