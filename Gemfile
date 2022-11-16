@@ -17,7 +17,7 @@ gem "puma", "~> 5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
-gem "pg", '~> 1.1'
+gem "pg", '~> 0.20'
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
@@ -83,6 +83,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 1.1' # for Heroku deployment
+  gem 'pg', '~> 0.20' # for Heroku deployment
   gem 'rails_12factor'
 end
