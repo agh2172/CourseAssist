@@ -1084,3 +1084,61 @@ Processing by DashboardsController#show as HTML
 Completed 200 OK in 15ms (Views: 3.1ms | ActiveRecord: 1.9ms | Allocations: 8110)
 
 
+Started GET "/" for 127.0.0.1 at 2022-11-17 17:01:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 1549)
+  Rendered layout layouts/application.html.erb (Duration: 83.4ms | Allocations: 22711)
+Completed 200 OK in 96ms (Views: 86.8ms | ActiveRecord: 0.0ms | Allocations: 27595)
+
+
+Started POST "/dashboards" for 127.0.0.1 at 2022-11-17 17:01:54 -0500
+Processing by DashboardsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"uni"=>"lfc2136"}, "commit"=>"Enter"}
+Redirected to http://127.0.0.1:3000/dashboards
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 416)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2022-11-17 17:01:54 -0500
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "lfc2136"], ["LIMIT", 1]]
+  ↳ app/controllers/dashboards_controller.rb:12:in `show'
+  [1m[36mAddcourse Load (0.4ms)[0m  [1m[34mSELECT "addcourses".* FROM "addcourses" WHERE "addcourses"."uni" = ? LIMIT ?[0m  [["uni", "lfc2136"], ["LIMIT", 1]]
+  ↳ app/controllers/dashboards_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 371)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 1373)
+Completed 200 OK in 32ms (Views: 3.7ms | ActiveRecord: 1.9ms | Allocations: 36539)
+
+
+Started GET "/addcourses" for 127.0.0.1 at 2022-11-17 17:04:38 -0500
+Processing by AddcoursesController#show as HTML
+Redirected to http://127.0.0.1:3000/addcourses/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 699)
+
+
+Started GET "/addcourses/new" for 127.0.0.1 at 2022-11-17 17:04:38 -0500
+Processing by AddcoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering addcourses/new.html.erb within layouts/application
+  Rendered addcourses/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1501)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2497)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 3220)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2022-11-17 17:04:42 -0500
+Processing by DashboardsController#show as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."uni" = ? LIMIT ?[0m  [["uni", "lfc2136"], ["LIMIT", 1]]
+  ↳ app/controllers/dashboards_controller.rb:12:in `show'
+  [1m[36mAddcourse Load (0.1ms)[0m  [1m[34mSELECT "addcourses".* FROM "addcourses" WHERE "addcourses"."uni" = ? LIMIT ?[0m  [["uni", "lfc2136"], ["LIMIT", 1]]
+  ↳ app/controllers/dashboards_controller.rb:13:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering dashboards/show.html.erb within layouts/application
+  Rendered dashboards/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1065)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2373)
+
+
